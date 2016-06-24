@@ -8,9 +8,6 @@ const install = require('gulp-install');
 const zip = require('gulp-zip');
 const runSequence = require('run-sequence');
 const AWS = require('aws-sdk');
-const s3 = new AWS.S3();
-const cloudFormation = new AWS.CloudFormation();
-const lambda = new AWS.Lambda();
 
 let config;
 try {
@@ -19,6 +16,10 @@ try {
 	config = {};
 }
 
+AWS.config.region = config.AwsRegion
+const s3 = new AWS.S3();
+const cloudFormation = new AWS.CloudFormation();
+const lambda = new AWS.Lambda();
 const stackName = 'cognito-identity-pool';
 
 gulp.task('clean', () => del([
