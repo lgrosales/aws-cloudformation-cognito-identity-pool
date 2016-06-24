@@ -30,8 +30,8 @@ Create a `config.json` file. See [The AWS-SDK for JavaScript docs on CognitoIden
 	"IdentityPoolName": "IdentityPoolName",
 	"AllowUnauthenticatedIdentities": false,
 	"LambdaS3Bucket": "bucket-name",
-	"LambdaS3Key": "CloudFormation-CustomResource-CognitoIdentityPool.zip"
-	
+	"LambdaS3Key": "CloudFormation-CustomResource-CognitoIdentityPool.zip",
+    "AwsRegion": "us-west-1"
 }
 ```
 

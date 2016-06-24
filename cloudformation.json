@@ -46,6 +46,10 @@
 			"Type": "String",
 			"AllowedPattern": ".*\\.zip",
 			"Description": "The S3 key for the lambda function code"
+		},
+		"AwsRegion": {
+			"Type": "String",
+			"Description": "The AWS region in which the lambda function and bucket Are stored"
 		}
 	},
 	"Conditions": {
